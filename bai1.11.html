@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập</title>
+</head>
+
+<body>
+
+    <form>
+
+        <table border="1" align="center">
+
+            <!-- Tiêu đề -->
+            <tr>
+                <td colspan="2" align="center">
+                    <h2>Đăng nhập</h2>
+                </td>
+            </tr>
+
+            <!-- Mã người dùng -->
+            <tr>
+                <td>Mã người dùng:</td>
+                <td>
+                    <input type="text" id="nguoidung">
+                </td>
+            </tr>
+
+            <!-- Mật khẩu -->
+            <tr>
+                <td>Mật khẩu:</td>
+                <td>
+                    <input type="password" id="matkhau">
+                </td>
+            </tr>
+
+            <!-- Nút đăng nhập -->
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button"
+                           value="Đồng ý"
+                           onclick="dangNhap()">
+                </td>
+            </tr>
+
+            <!-- Hiển thị kết quả -->
+            <tr>
+                <td colspan="2" align="center">
+                    <div id="ketqua"></div>
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+
+    <script>
+        function dangNhap() {
+            var ten = document.getElementById("nguoidung").value;
+
+            document.getElementById("ketqua").innerHTML = ten;
+        }
+    </script>
+
+</body>
+
+</html>

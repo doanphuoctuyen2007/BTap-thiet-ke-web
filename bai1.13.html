@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký du lịch</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 450px;
+            margin: 20px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffcc;
+        }
+
+        td {
+            border: 1px solid #999;
+            padding: 4px;
+        }
+
+        td:first-child {
+            width: 105px;
+            color: #336633;
+        }
+
+        h1 {
+            text-align: center;
+            color: #336699;
+            font-family: "Times New Roman", serif;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        select {
+            box-sizing: border-box;
+        }
+
+        .hoten {
+            width: 285px;
+        }
+
+        .diachi {
+            width: 185px;
+        }
+
+        .dienthoai {
+            width: 130px;
+        }
+
+        .tour {
+            width: 200px;
+        }
+
+        .thongbao {
+            text-align: center;
+            color: #e07000;
+            font-weight: bold;
+        }
+
+        .nut {
+            text-align: center;
+        }
+
+        fieldset {
+            width: 280px;
+            margin: auto;
+            border: 2px solid #990000;
+        }
+
+        legend {
+            color: #990000;
+            font-style: italic;
+        }
+
+        textarea {
+            width: 250px;
+            height: 55px;
+        }
+    </style>
+
+    <script>
+        function dangKy() {
+            document.getElementById("thongbao").innerText =
+                "Bạn đã đăng ký thành công!!!";
+        }
+    </script>
+</head>
+
+<body>
+
+<form>
+    <table>
+
+        <!-- Tiêu đề -->
+        <tr>
+            <td colspan="2">
+                <h1>Đăng ký du lịch</h1>
+            </td>
+        </tr>
+
+        <!-- Họ tên -->
+        <tr>
+            <td>Họ và tên</td>
+            <td>
+                <input type="text"
+                       class="hoten"
+                       id="hoten"
+                       value="Hồ Ngọc Quân">
+            </td>
+        </tr>
+
+        <!-- Địa chỉ -->
+        <tr>
+            <td>Địa chỉ</td>
+            <td>
+                <input type="text"
+                       class="diachi"
+                       id="diachi"
+                       value="PH Trường Đại Học GTVT TP.HCM">
+            </td>
+        </tr>
+
+        <!-- Điện thoại -->
+        <tr>
+            <td>Điện thoại</td>
+            <td>
+                <input type="text"
+                       class="dienthoai"
+                       id="dienthoai"
+                       value="0943962759">
+            </td>
+        </tr>
+
+        <!-- Khách Việt Nam -->
+        <tr>
+            <td>Khách Việt Nam</td>
+            <td>
+                <input type="checkbox"
+                       id="khachVN"
+                       checked>
+            </td>
+        </tr>
+
+        <!-- Chọn tour -->
+        <tr>
+            <td>Chọn tour</td>
+            <td>
+                <select id="tour" class="tour">
+
+                    <optgroup label="Miền Bắc">
+                        <option>Hà Nội - Hạ Long - Sapa</option>
+                        <option>Hà Nội - Chùa Hương - Ninh Bình</option>
+                        <option>Hà Nội - Cát Bà - Tuần Châu</option>
+                    </optgroup>
+
+                    <optgroup label="Miền Trung">
+                        <option>Huế - Đà Nẵng</option>
+                        <option>Nha Trang - Đà Lạt</option>
+                    </optgroup>
+
+                    <optgroup label="Miền Nam">
+                        <option>Buôn mê thuột - Gia Lai - Kontum</option>
+                        <option>TP.HCM - Cần Thơ - Cà Mau</option>
+                        <option>TP.HCM - Mỹ Tho</option>
+                    </optgroup>
+
+                </select>
+            </td>
+        </tr>
+
+        <!-- Phương tiện -->
+        <tr>
+            <td>Phương tiện</td>
+            <td>
+                <input type="radio"
+                       name="phuongtien"
+                       value="May bay">
+                Máy bay
+
+                <input type="radio"
+                       name="phuongtien"
+                       value="Xe Khach"
+                       checked>
+                Xe Khách
+            </td>
+        </tr>
+
+        <!-- Số lượng hành khách -->
+        <tr>
+            <td colspan="2">
+
+                <fieldset>
+                    <legend>Số lượng hành khách</legend>
+
+                    Người lớn
+                    <input type="text"
+                           id="nguoiLon"
+                           size="3"
+                           value="6">
+
+                    Trẻ em
+                    <input type="text"
+                           id="treEm"
+                           size="3"
+                           value="4">
+                </fieldset>
+
+            </td>
+        </tr>
+
+        <!-- Ghi chú -->
+        <tr>
+            <td>Ghi chú thêm</td>
+            <td>
+                <textarea id="ghichu">Có 2 trẻ em dưới 6 tuổi
+Có 2 người ăn chay</textarea>
+            </td>
+        </tr>
+
+        <!-- Nút -->
+        <tr>
+            <td colspan="2" class="nut">
+                <input type="button"
+                       value="Đồng ý"
+                       onclick="dangKy()">
+            </td>
+        </tr>
+
+        <!-- Thông báo -->
+        <tr>
+            <td colspan="2"
+                id="thongbao"
+                class="thongbao">
+            </td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Phiếu đăng ký tham gia chương trình khuyến mãi</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 550px;
+            margin: 20px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #dff5d8;
+        }
+
+        td {
+            border: 1px solid #888;
+            padding: 4px;
+        }
+
+        td:first-child {
+            width: 150px;
+        }
+
+        h2 {
+            text-align: center;
+            color: green;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 95%;
+            box-sizing: border-box;
+        }
+
+        .sanpham {
+            width: 150px;
+        }
+
+        .thongbao {
+            text-align: center;
+            color: red;
+            font-weight: bold;
+        }
+
+        .nut {
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        function dangKy() {
+            document.getElementById("thongbao").innerHTML =
+                "Bạn đã đăng ký thành công!!!";
+        }
+    </script>
+</head>
+
+<body>
+
+<form>
+    <table>
+        <tr>
+            <td colspan="2">
+                <h2>Phiếu đăng ký tham gia chương trình khuyến mãi</h2>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Họ và tên</td>
+            <td>
+                <input type="text" id="hoten"
+                       value="Đoàn Phước Tuyên">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Địa chỉ</td>
+            <td>
+                <input type="text" id="diachi"
+                       value="PH Trường Đại Học GTVT TP.HCM">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Điện thoại</td>
+            <td>
+                <input type="text" id="dienthoai"
+                       value="0943962759">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Phái</td>
+            <td>
+                <input type="radio" name="phai" value="Nam"> Nam
+                <input type="radio" name="phai" value="Nu" checked> Nữ
+            </td>
+        </tr>
+
+        <tr>
+            <td>Nghề nghiệp</td>
+            <td>
+                <select id="nghenghiep">
+                    <option>Bác sĩ</option>
+                    <option selected>Kỹ sư</option>
+                    <option>Giáo viên</option>
+                    <option>Khác</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Chọn sản phẩm tham gia</td>
+            <td>
+                <select id="sanpham" class="sanpham" multiple size="4">
+                    <option>Sữa rửa mặt</option>
+                    <option>Giày đá bóng</option>
+                    <option>Dầu gội đầu</option>
+                    <option>Sữa tắm</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Số người dự đoán tham gia</td>
+            <td>
+                <input type="number" id="sodudoan" value="10000">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="nut">
+                <input type="button" value="Đồng ý"
+                       onclick="dangKy()">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" id="thongbao" class="thongbao">
+            </td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>
